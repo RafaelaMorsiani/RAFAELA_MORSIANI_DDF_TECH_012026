@@ -1,5 +1,9 @@
 # RAFAELA_MORSIANI_DDF_TECH_012026
 
+
+Link do Vídeo: Link do YouTube (Unlisted) logo no topo.
+
+
 1. Introdução e Objetivo
    
 Este projeto apresenta o desenvolvimento de uma solução de dados para um ecossistema de e-commerce, focando na transformação de dados brutos em insights estratégicos. A solução integra o enriquecimento automático de informações, processamento de grandes volumes de dados e a estruturação de um Data Warehouse para análise.

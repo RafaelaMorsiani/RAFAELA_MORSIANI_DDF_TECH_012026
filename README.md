@@ -14,12 +14,42 @@ O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiê
 - SQL: Linguagem essencial para a criação de Views e modelagem das tabelas fato e dimensões no Data Warehouse.
 - Metabase: Ferramenta de Business Intelligence integrada à Dadosfera para criação de dashboards e visualização dos KPIs de negócio.
 
-4. Sobre a Base de Dados
+3. Sobre a Base de Dados
 
-A base de dados foi gerada sinteticamente, representando o dominio de um Ecommerce. O script utilizado consta no arquivo https://colab.research.google.com/drive/1WMRddcXrWZgG7dHqzBtgFg58sBw8zhb8?usp=sharing
+A base de dados foi gerada sinteticamente, representando o dominio de um Ecommerce. O script utilizado consta no arquivo https://colab.research.google.com/drive/1WMRddcXrWZgG7dHqzBtgFg58sBw8zhb8?usp=sharing e quatro arquivos foram gerados, totabilizando mais de 100.000 registros.
+
+Após a geração da base de dados, foi realizada a integração através do módulo de coleta da Dadosfera. Os seguintes arquivos foram importados: ecommerce_items, ecommerce_orders, ecommerce_products e ecommerce_users.
 
 
-6. Arquitetura da Solução
+4. Exploração e Catalogação
+
+Para garantir a integridade e organização, os dados percorreram as seguintes zonas: 
+- Landing Zone: Ingestão inicial dos arquivos CSV brutos via módulo de Coleta.
+- Standardized Zone: Camada onde os dados foram catalogados, tipados e documentados com metadados no módulo Explorar.
+- Curated Zone: Tabelas finais estruturadas, prontas para consumo em ferramentas de Analytics e IA.
+
+5. Data Quality
+
+PAra garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
+- Verificação de IDs nulos
+- Validação de preços, subtotais e quantidades para que não sejam negativos e/ou zero
+- Verificação de emails validos
+O script gerou um relatório que documenta o sucesso de cada validação.
+O script utilizado consta no seguinte arquivo: https://colab.research.google.com/drive/1jLocsuyAcuP7KbeYaTgyepixEiKw690a?usp=sharing
+
+Além disso, foi implementado um modelo de dados comum que padroniza as chaves de ligação entre as tabelas, permitindo o o reconhecimento das relações entre as tabelas de forma automática.
+
+
+
+
+
+
+
+
+
+
+
+7. Arquitetura da Solução
 Explique as etapas que você percorreu:
 
 Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.

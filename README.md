@@ -1,10 +1,12 @@
 # RAFAELA_MORSIANI_DDF_TECH_012026
 
 1. Introdução e Objetivo
+   
 Este projeto apresenta o desenvolvimento de uma solução de dados para um ecossistema de e-commerce, focando na transformação de dados brutos em insights estratégicos. A solução integra o enriquecimento automático de informações, processamento de grandes volumes de dados e a estruturação de um Data Warehouse para análise.
 O projeto demonstrou a capacidade de importat dados de múltiplas origens, processá-los e disponibilizá-los para consumo em um dashboard analítico no Metabase, utilizando a plataforma Dadosfera como base de operações.
 
-2. Tecnologias Utilizadas 
+3. Tecnologias Utilizadas
+
 O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiência e escalabilidade:
     Dadosfera: Plataforma de dados SaaS utilizada como base para governança, integração e armazenamento (Data Lakehouse).
     Python (Pandas): Linguagem utilizada para manipulação de dados e orquestração do pipeline de enriquecimento.
@@ -15,7 +17,7 @@ O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiê
 
 
 
-4. Arquitetura da Solução
+5. Arquitetura da Solução
 Explique as etapas que você percorreu:
 
 Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.

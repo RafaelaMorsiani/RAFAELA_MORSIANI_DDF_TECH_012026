@@ -33,13 +33,33 @@ Para garantir a integridade e organização, os dados percorreram as seguintes z
 PAra garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
 - Verificação de IDs nulos
 - Validação de preços, subtotais e quantidades para que não sejam negativos e/ou zero
-- Verificação de emails validos
+- Verificação de emails validos.
+
 O script gerou um relatório que documenta o sucesso de cada validação.
 O script utilizado consta no seguinte arquivo: https://colab.research.google.com/drive/1jLocsuyAcuP7KbeYaTgyepixEiKw690a?usp=sharing
 
 Além disso, foi implementado um modelo de dados comum que padroniza as chaves de ligação entre as tabelas, permitindo o o reconhecimento das relações entre as tabelas de forma automática.
 
 
+6. Inteligência Artificial e Enriquecimento de Dados (Item 5)
+
+Nesta etapa, dados desestruturados, como a descrição dos produtos, foi transformada em Features estruturadas para análise de negócio, avtravés da utilização de IA.
+
+O dataset ecommerce_products inclui informações sobre materiais e tecnologias do produto e essas informações estavam diluidas em descrições textuais. 
+
+O modelo Gemini 2.0 Flash foi utilizado via API para processar os 176 produtos do catálogo. O Python script foi construido segundo os seguintes passos:
+
+- Para lidar com os limites da API gratuita, foi implementado uma lógica de exponencial backoff e pausas estratégicas, garantindo que a pipeline fosse resiliente a falhas de conexão e limites de cota;
+- Após identificar que o formato CSV corrompia dados complexos de IA, o prompt foi alterado de forma a garantir que a IA retornasse os dados em formato JSON, facilitando a integração automática;
+
+A partir das descrições brutas dos produtos, a IA generou as seguintes colunas analíticas:
+- material: identificação automática de materiais;
+- tecnologia: extração de diferencias tecnologicos do produto.
+
+Antes (Texto Bruto): "O Smartphone Apple - Plus é a escolha ideal para quem busca performance. Fabricado com Polímero de alta resistência, este modelo Plus oferece Bateria de 5000mAh. Produto original Apple com acabamento premium."
+
+Depois (Features IA): "material_ia": ["Alumínio", "Vidro"],
+        "tecnologia_ia": ["iOS", "Tela Retina", "Câmera avançada", "Processador Apple Silicon", "5G"]
 
 
 
@@ -49,7 +69,10 @@ Além disso, foi implementado um modelo de dados comum que padroniza as chaves d
 
 
 
-7. Arquitetura da Solução
+
+
+
+8. Arquitetura da Solução
 Explique as etapas que você percorreu:
 
 Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.

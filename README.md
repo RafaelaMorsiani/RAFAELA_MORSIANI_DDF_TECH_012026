@@ -5,14 +5,14 @@
 Este projeto apresenta o desenvolvimento de uma solução de dados para um ecossistema de e-commerce, focando na transformação de dados brutos em insights estratégicos. A solução integra o enriquecimento automático de informações, processamento de grandes volumes de dados e a estruturação de um Data Warehouse para análise.
 O projeto demonstrou a capacidade de importat dados de múltiplas origens, processá-los e disponibilizá-los para consumo em um dashboard analítico no Metabase, utilizando a plataforma Dadosfera como base de operações.
 
-3. Tecnologias Utilizadas
+2. Tecnologias Utilizadas
 
 O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiência e escalabilidade:
-    Dadosfera: Plataforma de dados SaaS utilizada como base para governança, integração e armazenamento (Data Lakehouse).
-    Python (Pandas): Linguagem utilizada para manipulação de dados e orquestração do pipeline de enriquecimento.
-    Gemini 2.0 Flash (Google AI): Modelo de linguagem de última geração utilizado para a extração inteligente de metadados das     descrições de produtos.
-    SQL: Linguagem essencial para a criação de Views e modelagem das tabelas fato e dimensões no Data Warehouse.
-    Metabase: Ferramenta de Business Intelligence integrada à Dadosfera para criação de dashboards e visualização dos KPIs de negócio.
+- Dadosfera: Plataforma de dados SaaS utilizada como base para governança, integração e armazenamento (Data Lakehouse).
+- Python (Pandas): Linguagem utilizada para manipulação de dados e orquestração do pipeline de enriquecimento.
+- Gemini 2.0 Flash (Google AI): Modelo de linguagem de última geração utilizado para a extração inteligente de metadados das     descrições de produtos.
+- SQL: Linguagem essencial para a criação de Views e modelagem das tabelas fato e dimensões no Data Warehouse.
+- Metabase: Ferramenta de Business Intelligence integrada à Dadosfera para criação de dashboards e visualização dos KPIs de negócio.
 
 
 

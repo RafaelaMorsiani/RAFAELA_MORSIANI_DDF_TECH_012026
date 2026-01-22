@@ -10,14 +10,16 @@ O projeto demonstrou a capacidade de importat dados de múltiplas origens, proce
 O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiência e escalabilidade:
 - Dadosfera: Plataforma de dados SaaS utilizada como base para governança, integração e armazenamento (Data Lakehouse).
 - Python (Pandas): Linguagem utilizada para manipulação de dados e orquestração do pipeline de enriquecimento.
-- Gemini 2.0 Flash (Google AI): Modelo de linguagem de última geração utilizado para a extração inteligente de metadados das     descrições de produtos.
+- Gemini 2.0 Flash (Google AI): Modelo de linguagem de utilizado para a extração inteligente de metadados das descrições de produtos.
 - SQL: Linguagem essencial para a criação de Views e modelagem das tabelas fato e dimensões no Data Warehouse.
 - Metabase: Ferramenta de Business Intelligence integrada à Dadosfera para criação de dashboards e visualização dos KPIs de negócio.
 
+4. Sobre a Base de Dados
+
+A base de dados foi gerada sinteticamente, representando o dominio de um Ecommerce. O script utilizado consta no arquivo https://colab.research.google.com/drive/1WMRddcXrWZgG7dHqzBtgFg58sBw8zhb8?usp=sharing
 
 
-
-5. Arquitetura da Solução
+6. Arquitetura da Solução
 Explique as etapas que você percorreu:
 
 Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.

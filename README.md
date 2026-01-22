@@ -30,7 +30,7 @@ Para garantir a integridade e organização, os dados percorreram as seguintes z
 
 5. Data Quality
 
-PAra garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
+Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
 - Verificação de IDs nulos
 - Validação de preços, subtotais e quantidades para que não sejam negativos e/ou zero
 - Verificação de emails validos.
@@ -47,24 +47,34 @@ Nesta etapa, dados desestruturados, como a descrição dos produtos, foi transfo
 
 O dataset ecommerce_products inclui informações sobre materiais e tecnologias do produto e essas informações estavam diluidas em descrições textuais. 
 
-O modelo Gemini 2.0 Flash foi utilizado via API para processar os 176 produtos do catálogo. O Python script foi construido segundo os seguintes passos:
+O modelo Gemini 2.5 Flash foi utilizado via API para processar os 176 produtos do catálogo. O Python script foi construido segundo os seguintes passos:
 
-- Para lidar com os limites da API gratuita, foi implementado uma lógica de exponencial backoff e pausas estratégicas, garantindo que a pipeline fosse resiliente a falhas de conexão e limites de cota;
+- De modo à otimizar a performance, foi implementado uma lógica de processamento por lotes, onde os produtos eram processados em grupos de 10 registros por vez.
 - Após identificar que o formato CSV corrompia dados complexos de IA, o prompt foi alterado de forma a garantir que a IA retornasse os dados em formato JSON, facilitando a integração automática;
+- O prompt foi desenhado de modo a forçar a IA a retornar um JSON Array perfeitamente estruturado;
+- Foram implementadas pausas estratégicas, de modo a garantir que o fluxo  de dados respeite os limites de taixa da API gratuita e evite assim interrupções no processamento. Além disso, em caso de falha ou erro, o script realiza até 5 tentativas.
+
 
 A partir das descrições brutas dos produtos, a IA generou as seguintes colunas analíticas:
 - material: identificação automática de materiais;
 - tecnologia: extração de diferencias tecnologicos do produto.
 
-Antes (Texto Bruto): "O Smartphone Apple - Plus é a escolha ideal para quem busca performance. Fabricado com Polímero de alta resistência, este modelo Plus oferece Bateria de 5000mAh. Produto original Apple com acabamento premium."
+Antes (Texto Bruto): "O Smartphone Apple - Basic é a escolha ideal para quem busca performance. Fabricado com Polímero de alta resistência, este modelo Basic oferece Conexão 5G. Produto original Apple com acabamento premium."
 
-Depois (Features IA): "material_ia": ["Alumínio", "Vidro"],
-        "tecnologia_ia": ["iOS", "Tela Retina", "Câmera avançada", "Processador Apple Silicon", "5G"]
-
-
+Depois (Features IA): "material": ["Polímero de alta resistência"],
+                       "tecnologia": ["Conexão 5G"]
 
 
 
+7. Modelagem de Dados
+
+Para transformar os dados brutos em uma estrutura analítica, foi-se utilizado os princípios de modelagem Kimball, estruturando o Data Warehouse em um formato estrela com as seguintes camadas:
+- Tabela Fato: Items
+- Tabelas Dimensão: Products, Users e Orders
+
+Duas visões principais foram criadas no SQL da Dadosfera: 
+- V_Produtos_Enriquecidos: uma visão que inclui a nova database com os features extraídos com IA
+- V_APerfil_Consumidor: 
 
 
 
@@ -72,7 +82,9 @@ Depois (Features IA): "material_ia": ["Alumínio", "Vidro"],
 
 
 
-8. Arquitetura da Solução
+
+
+9. Arquitetura da Solução
 Explique as etapas que você percorreu:
 
 Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.

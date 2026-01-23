@@ -126,7 +126,8 @@ De forma a garantir a atualização constantes dos dados do Ecommerce MK, foi-se
 
   O pipeline foi configurado para rodar em intervalos programados (a cada 24h), garantindo que os dashboards reflitam sempre a realizade mais recente das vendas.
 
-  
+  <img width="1828" height="611" alt="image" src="https://github.com/user-attachments/assets/fae274fa-628f-4486-851e-18d62f763938" />
+
 
 
 

@@ -38,6 +38,8 @@ Para garantir a integridade e organização, os dados percorreram as seguintes z
 - Standardized Zone: Camada onde os dados foram catalogados, tipados e documentados com metadados no módulo Explorar.
 - Curated Zone: Tabelas finais estruturadas, prontas para consumo em ferramentas de Analytics e IA.
 
+
+
 **Data Quality - Item 4**
 
 Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negócio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
@@ -47,8 +49,11 @@ Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido u
 
 O script gerou um relatório em JSON que documenta o sucesso de cada validação.
 O script utilizado consta no seguinte arquivo: https://colab.research.google.com/drive/1jLocsuyAcuP7KbeYaTgyepixEiKw690a?usp=sharing
+<img width="647" height="123" alt="image" src="https://github.com/user-attachments/assets/ad092f73-3071-4e65-bc54-f16e7ec2fd06" />
+
 
 Além disso, foi implementado um modelo de dados comum que padroniza as chaves de ligação entre as tabelas, permitindo o o reconhecimento das relações entre as tabelas de forma automática.
+
 
 
 **Inteligência Artificial e Enriquecimento de Dados - Item 5**
@@ -89,6 +94,8 @@ No modo SQL da Dadosfera, duas visões estratégicas foram desenvolvidas, simpli
 - V_Fato_Vendas_Enriquecida: Essa visão realiza o join da tabela Items com a taabela Orders e também com a tabela Products enriquecida com as features extraídas com IA.
 - V_Perfil_Consumidor: Essa visão cruza o histórico de compras, realizando o join da tabela Users com Orders.
 
+
+
 **Análise de Dados - Item 7**
 
 Nesta etapa, o módulo de visualização (Metabase) da Dadosfera foi utilizado para converter os dados modelados em um Dashboard, com o objetivo de validar hipóteses de negócio e monitorar a performance do ecommerce MK.
@@ -104,6 +111,8 @@ Além disso, com os gráficos gerados é possível comparar o faturamento total 
 
 
 O dashboard pode ser acessado a partir do seguinte link: https://metabase-treinamentos.dadosfera.ai/dashboard/264
+
+
 
 **Pipelines - Item 8**
 

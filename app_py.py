@@ -26,4 +26,3 @@ try:
 
 except Exception as e:
     st.error(f"Erro: {e}. Certifique-se que o arquivo 'ecommerce_products_enriched.csv' existe.")
-    """)

@@ -91,7 +91,33 @@ No modo SQL da Dadosfera, duas visões estratégicas foram desenvolvidas, simpli
 
 **Análise de Dados - Item 7**
 
-Nesta etapa, o módulo de visualização (Metabase) da Dadosfera foi utilizado, convertendo os dados processados em um dashboard, com o objetivo de validar hipóteses de negócio e monitorar a performance do ecommerce MK.
+Nesta etapa, o módulo de visualização (Metabase) da Dadosfera foi utilizado para converter os dados modelados em um Dashboard, com o objetivo de validar hipóteses de negócio e monitorar a performance do ecommerce MK.
+
+Seis visualizações esratégicas foram criadas, conforme a imagem a seguir.
+<img width="885" height="705" alt="image" src="https://github.com/user-attachments/assets/5813a956-94fb-43d3-ad4b-77913c102b7f" />
+
+O dashboard monitora o faturamento total do ecommerce e também a base de usuários.
+Com a importação dos features extraídos com IA, gerou-se um gráfico identificando quais tecnologias são responsáveis pelo maior volume financeiro bruto.
+Além disso, com os gráficos gerados é possível comparar o faturamento total e o ticket médio por categoria dos produtos, indicando que, embora os eletrônicos tenham um maior volume, a categoria moda mantém um ticket médio mais estável e elevado. Para essa etapa, o query abaixo foi utilizado.
+
+<img width="786" height="561" alt="image" src="https://github.com/user-attachments/assets/fdd5bfd6-3c93-45b2-b234-f7252856d948" />
+
+
+O dashboard pode ser acessado a partir do seguinte link: https://metabase-treinamentos.dadosfera.ai/dashboard/264
+
+**Pipelines - Item 8**
+
+De forma a garantir a atualização constantes dos dados do Ecommerce MK, foi-se utilizado o módulo de pipelines da Dadosfera. O pipeline orquestrado segue as seguintes etapas:
+- Coleta: Conexão direta com os arquivos CSV originais
+- Validação: Processamento das tabelas
+- Disponibilização: Publicação dos ativos finais para o módulo de visualização em Metabase.
+
+  O pipeline foi configurado para rodar em intervalos programados (a cada 24h), garantindo que os dashboards reflitam sempre a realizade mais recente das vendas.
+
+  
+
+
+
 
 
 

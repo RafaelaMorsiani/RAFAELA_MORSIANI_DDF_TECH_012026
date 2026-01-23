@@ -4,6 +4,8 @@
 
 **Vídeo de Apresentação:** https://youtu.be/UaHwDdPRVxk
 
+**Trello:** https://trello.com/invite/b/696fe6e4eca45a6bff8978ef/ATTIa2fb74d3429d8c54e17420db9854c4dd804625FA/projeto-dadosfera
+
 
 **Introdução e Objetivo**
    

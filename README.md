@@ -130,6 +130,15 @@ De forma a garantir a atualização constantes dos dados do Ecommerce MK, foi-se
 
 
 
+**Data App - Item 9**
+
+O Data App foi desenvolvido de modo a xibir o faturamento total e o ticket médio de vendas do ecommerce.
+
+O LocalTunnel foi utilizado de modo a criar um túnel seguro de comunicação.
+<img width="1870" height="739" alt="image" src="https://github.com/user-attachments/assets/5057a9f9-37b9-4efa-9166-c2be546d4d53" />
+
+
+
 
 
 

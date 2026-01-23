@@ -1,7 +1,8 @@
 # RAFAELA_MORSIANI_DDF_TECH_012026
 
 **Candidata:** Rafaela Morsiani Kawashita
-**Vídeo de Apresentação:** []
+
+**Vídeo de Apresentação:** https://youtu.be/UaHwDdPRVxk
 
 
 **Introdução e Objetivo**

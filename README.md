@@ -38,20 +38,20 @@ Para garantir a integridade e organização, os dados percorreram as seguintes z
 - Standardized Zone: Camada onde os dados foram catalogados, tipados e documentados com metadados no módulo Explorar.
 - Curated Zone: Tabelas finais estruturadas, prontas para consumo em ferramentas de Analytics e IA.
 
-**5. Data Quality**
+**Data Quality - Item 4**
 
 Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negócio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
 - Verificação de IDs nulos
 - Validação de preços, subtotais e quantidades para que não sejam negativos e/ou zero
 - Verificação de emails validos.
 
-O script gerou um relatório que documenta o sucesso de cada validação.
+O script gerou um relatório em JSON que documenta o sucesso de cada validação.
 O script utilizado consta no seguinte arquivo: https://colab.research.google.com/drive/1jLocsuyAcuP7KbeYaTgyepixEiKw690a?usp=sharing
 
 Além disso, foi implementado um modelo de dados comum que padroniza as chaves de ligação entre as tabelas, permitindo o o reconhecimento das relações entre as tabelas de forma automática.
 
 
-**6. Inteligência Artificial e Enriquecimento de Dados (Item 5)**
+**Inteligência Artificial e Enriquecimento de Dados - Item 5**
 
 Nesta etapa, dados desestruturados, como a descrição dos produtos, foi transformada em Features estruturadas para análise de negócio, avtravés da utilização de IA.
 
@@ -60,10 +60,8 @@ O dataset ecommerce_products inclui informações sobre materiais e tecnologias 
 O modelo Gemini 2.5 Flash foi utilizado via API para processar os 176 produtos do catálogo. O Python script foi construido segundo os seguintes passos:
 
 - De modo à otimizar a performance, foi implementado uma lógica de processamento por lotes, onde os produtos eram processados em grupos de 10 registros por vez.
-- Após identificar que o formato CSV corrompia dados complexos de IA, o prompt foi alterado de forma a garantir que a IA retornasse os dados em formato JSON, facilitando a integração automática;
-- O prompt foi desenhado de modo a forçar a IA a retornar um JSON Array perfeitamente estruturado;
 - Foram implementadas pausas estratégicas, de modo a garantir que o fluxo  de dados respeite os limites de taixa da API gratuita e evite assim interrupções no processamento. Além disso, em caso de falha ou erro, o script realiza até 5 tentativas.
-
+- O prompt foi desenhado de modo a forçarA a retornar um JSON Array perfeitamente estruturado;
 
 A partir das descrições brutas dos produtos, a IA generou as seguintes colunas analíticas:
 - material: identificação automática de materiais;
@@ -74,17 +72,26 @@ Antes (Texto Bruto): "O Smartphone Apple - Basic é a escolha ideal para quem bu
 Depois (Features IA): "material": ["Polímero de alta resistência"],
                        "tecnologia": ["Conexão 5G"]
 
+O script utilizado para essa etapa consta no arquivo https://colab.research.google.com/drive/1G3Njh53HrhyosxjKL0d9JMyTnwD5RLBe?usp=sharing
 
 
-**7. Modelagem de Dados**
+
+**Modelagem de Dados - Item 6**
 
 Para transformar os dados brutos em uma estrutura analítica, foi-se utilizado os princípios de modelagem Kimball, estruturando o Data Warehouse em um formato estrela com as seguintes camadas:
-- Tabela Fato: Items
-- Tabelas Dimensão: Products, Users e Orders
+- Tabela Fato: Items - Atua como núcleo do modelo, registrando cada item vendido.
+- Tabelas Dimensão: Products, Users e Orders - Acrescentam o contexto necessário para análise.
 
-Duas visões principais foram criadas no SQL da Dadosfera: 
-- V_Produtos_Enriquecidos: uma visão que inclui a nova database com os features extraídos com IA
-- V_APerfil_Consumidor: 
+O seguinte diagrama foi criado:
+<img width="975" height="711" alt="image" src="https://github.com/user-attachments/assets/b1d47826-9814-4d73-b7db-74bff76caed9" />
+
+No modo SQL da Dadosfera, duas visões estratégicas foram desenvolvidas, simplificando o acesso à informação aos usuários finais:
+- V_Fato_Vendas_Enriquecida: Essa visão realiza o join da tabela Items com a taabela Orders e também com a tabela Products enriquecida com as features extraídas com IA.
+- V_Perfil_Consumidor: Essa visão cruza o histórico de compras, realizando o join da tabela Users com Orders.
+
+**Análise de Dados - Item 7**
+
+Nesta etapa, o módulo de visualização (Metabase) da Dadosfera foi utilizado, convertendo os dados processados em um dashboard, com o objetivo de validar hipóteses de negócio e monitorar a performance do ecommerce MK.
 
 
 

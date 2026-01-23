@@ -85,35 +85,3 @@ Duas visões principais foram criadas no SQL da Dadosfera:
 
 
 
-
-
-
-9. Arquitetura da Solução
-Explique as etapas que você percorreu:
-
-Coleta/Ingestão: Upload dos arquivos CSV para a Dadosfera.
-
-Processamento: Uso de Python e Gemini 2.0 Flash para extração de atributos técnicos.
-
-Armazenamento/Modelagem: Estruturação no Snowflake seguindo o modelo Kimball (Star Schema).
-
-3. Modelagem Dimensional (Item 6)
-Este é um dos pontos mais importantes. Insira o diagrama que você montou e explique:
-
-Tabela Fato: FCT_ITEMS (métrica de vendas).
-
-Tabelas Dimensão: DIM_PRODUCTS, DIM_USERS, DIM_ORDERS.
-
-Justificativa: Por que usar Star Schema? (Facilidade de uso no Metabase e performance de consulta).
-
-4. Inteligência Artificial e Enriquecimento (Item 5 e 8)
-Como você usou o Gemini 2.0 Flash para gerar valor:
-
-O que foi feito: Extração automática de materiais e tecnologias a partir das descrições dos produtos.
-
-Resiliência do Pipeline: Mencione que você implementou lógica de Rate Limiting (pausas de 4.5s) para lidar com as cotas da API gratuita, garantindo que todos os 176 produtos fossem processados sem erros de "429 Too Many Requests".
-
-5. Análise de Dados (Item 7)
-Coloque prints do seu Dashboard e explique cada um dos 5 gráficos:
-
-Ex: "Gráfico 5: Distribuição de Materiais - Criado a partir dos dados extraídos pela IA, permitindo identificar que 40% dos produtos utilizam tecnologia sustentável."

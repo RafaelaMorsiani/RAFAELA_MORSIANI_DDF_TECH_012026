@@ -12,8 +12,8 @@ try:
 
     # KPIs
     c1, c2 = st.columns(2)
-    c1.metric("Faturamento Total", f"R$ {df['price'].sum():,.2f}")
-    c2.metric("Ticket Médio", f"R$ {df['price'].mean():.2f}")
+    c1.metric("Valor do Inventário", f"R$ {df['price'].sum():,.2f}")
+    c2.metric("Preço Médio por Produto", f"R$ {df['price'].mean():.2f}")
 
     # Gráfico simples de Categorias
     st.subheader("Vendas por Categoria")

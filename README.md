@@ -1,15 +1,15 @@
 # RAFAELA_MORSIANI_DDF_TECH_012026
 
+**Candidata:** Rafaela Morsiani Kawashita
+**Vídeo de Apresentação:** []
 
-Link do Vídeo: Link do YouTube (Unlisted) logo no topo.
 
-
-1. Introdução e Objetivo
+**Introdução e Objetivo**
    
 Este projeto apresenta o desenvolvimento de uma solução de dados para um ecossistema de e-commerce, focando na transformação de dados brutos em insights estratégicos. A solução integra o enriquecimento automático de informações, processamento de grandes volumes de dados e a estruturação de um Data Warehouse para análise.
 O projeto demonstrou a capacidade de importat dados de múltiplas origens, processá-los e disponibilizá-los para consumo em um dashboard analítico no Metabase, utilizando a plataforma Dadosfera como base de operações.
 
-2. Tecnologias Utilizadas
+**Tecnologias Utilizadas**
 
 O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiência e escalabilidade:
 - Dadosfera: Plataforma de dados SaaS utilizada como base para governança, integração e armazenamento (Data Lakehouse).
@@ -18,21 +18,26 @@ O projeto foi desenvolvido integrando tecnologias de ponta para garantir eficiê
 - SQL: Linguagem essencial para a criação de Views e modelagem das tabelas fato e dimensões no Data Warehouse.
 - Metabase: Ferramenta de Business Intelligence integrada à Dadosfera para criação de dashboards e visualização dos KPIs de negócio.
 
-3. Sobre a Base de Dados
+**Sobre a Base de Dados - Item 1**
 
 A base de dados foi gerada sinteticamente, representando o dominio de um Ecommerce. O script utilizado consta no arquivo https://colab.research.google.com/drive/1WMRddcXrWZgG7dHqzBtgFg58sBw8zhb8?usp=sharing e quatro arquivos foram gerados, totabilizando mais de 100.000 registros.
 
-Após a geração da base de dados, foi realizada a integração através do módulo de coleta da Dadosfera. Os seguintes arquivos foram importados: ecommerce_items, ecommerce_orders, ecommerce_products e ecommerce_users.
 
 
-4. Exploração e Catalogação
+
+**Exploração e Catalogação - Item 2 e 3**
+
+Após a geração da base de dados, foi realizada a integração através do módulo de coleta da Dadosfera. Os seguintes arquivos foram importados: ecommerce_items, ecommerce_orders, ecommerce_products e ecommerce_users. A imagem 1 apresenta os arquivos na aba de catálogo da Dadosfera.
+
+<img width="1880" height="861" alt="image" src="https://github.com/user-attachments/assets/41cdded1-dd0d-49a3-b484-f3e7cc44b638" />
+
 
 Para garantir a integridade e organização, os dados percorreram as seguintes zonas: 
 - Landing Zone: Ingestão inicial dos arquivos CSV brutos via módulo de Coleta.
 - Standardized Zone: Camada onde os dados foram catalogados, tipados e documentados com metadados no módulo Explorar.
 - Curated Zone: Tabelas finais estruturadas, prontas para consumo em ferramentas de Analytics e IA.
 
-5. Data Quality
+**5. Data Quality**
 
 Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
 - Verificação de IDs nulos
@@ -45,7 +50,7 @@ O script utilizado consta no seguinte arquivo: https://colab.research.google.com
 Além disso, foi implementado um modelo de dados comum que padroniza as chaves de ligação entre as tabelas, permitindo o o reconhecimento das relações entre as tabelas de forma automática.
 
 
-6. Inteligência Artificial e Enriquecimento de Dados (Item 5)
+**6. Inteligência Artificial e Enriquecimento de Dados (Item 5)**
 
 Nesta etapa, dados desestruturados, como a descrição dos produtos, foi transformada em Features estruturadas para análise de negócio, avtravés da utilização de IA.
 
@@ -70,7 +75,7 @@ Depois (Features IA): "material": ["Polímero de alta resistência"],
 
 
 
-7. Modelagem de Dados
+**7. Modelagem de Dados**
 
 Para transformar os dados brutos em uma estrutura analítica, foi-se utilizado os princípios de modelagem Kimball, estruturando o Data Warehouse em um formato estrela com as seguintes camadas:
 - Tabela Fato: Items

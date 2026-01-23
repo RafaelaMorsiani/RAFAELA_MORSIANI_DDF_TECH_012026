@@ -27,10 +27,11 @@ A base de dados foi gerada sinteticamente, representando o dominio de um Ecommer
 
 **Exploração e Catalogação - Item 2 e 3**
 
-Após a geração da base de dados, foi realizada a integração através do módulo de coleta da Dadosfera. Os seguintes arquivos foram importados: ecommerce_items, ecommerce_orders, ecommerce_products e ecommerce_users. A imagem 1 apresenta os arquivos na aba de catálogo da Dadosfera.
+Após a geração da base de dados, foi realizada a integração através do módulo de coleta da Dadosfera. Os seguintes arquivos foram importados: ecommerce_items, ecommerce_orders, ecommerce_products e ecommerce_users. A imagem a seguir apresenta os arquivos na aba de catálogo da Dadosfera.
 
 <img width="1880" height="861" alt="image" src="https://github.com/user-attachments/assets/41cdded1-dd0d-49a3-b484-f3e7cc44b638" />
 
+Após esta etapa, os dados foram catalogados e a tag única "ecommerce_MK" foi implementada. Essa prática permite que diferentes áreas da empresa localizem todo o ecossistema do projeto através de uma única busca.
 
 Para garantir a integridade e organização, os dados percorreram as seguintes zonas: 
 - Landing Zone: Ingestão inicial dos arquivos CSV brutos via módulo de Coleta.
@@ -39,7 +40,7 @@ Para garantir a integridade e organização, os dados percorreram as seguintes z
 
 **5. Data Quality**
 
-Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negocio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
+Para garantir a confiabilidade e o bom desempenho do projeto, foi desenvolvido um script em Python que aplica as regras de negócio sobre os quatro datasets iniciais, através da utilização da biblioteca Great Expectations. As principais validações incluíram: 
 - Verificação de IDs nulos
 - Validação de preços, subtotais e quantidades para que não sejam negativos e/ou zero
 - Verificação de emails validos.

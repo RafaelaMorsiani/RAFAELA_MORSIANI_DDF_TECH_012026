@@ -1,0 +1,479 @@
+[
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "price",
+                "min_value": 0.01,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 176,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "product_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 176,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "email",
+                "regex": ".+@.+\\..+",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 10000,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "user_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 10000,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "name",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 10000,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "last_name",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 10000,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "item_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "order_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "product_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "unit_price",
+                "min_value": 0.01,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "subtotal",
+                "min_value": 0.01,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "quantity",
+                "min_value": 1,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 104921,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "order_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "user_id",
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "status",
+                "value_set": [
+                    "delivered",
+                    "shipped",
+                    "processing",
+                    "cancelled"
+                ],
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_in_set",
+            "kwargs": {
+                "column": "payment_method",
+                "value_set": [
+                    "Boleto",
+                    "Pix",
+                    "Credit Card"
+                ],
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "shipping_cost",
+                "min_value": 0,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    },
+    {
+        "success": true,
+        "expectation_config": {
+            "expectation_type": "expect_column_values_to_be_between",
+            "kwargs": {
+                "column": "total_amount",
+                "min_value": 1,
+                "result_format": "BASIC"
+            },
+            "meta": {}
+        },
+        "result": {
+            "element_count": 35000,
+            "missing_count": 0,
+            "missing_percent": 0.0,
+            "unexpected_count": 0,
+            "unexpected_percent": 0.0,
+            "unexpected_percent_total": 0.0,
+            "unexpected_percent_nonmissing": 0.0,
+            "partial_unexpected_list": []
+        },
+        "meta": {},
+        "exception_info": {
+            "raised_exception": false,
+            "exception_traceback": null,
+            "exception_message": null
+        }
+    }
+]
